@@ -66,7 +66,7 @@ lets one put a block of code that is executed at compile-time each time a call t
 resolved. One can inspect parameter types at compile-time; Goal: to filter or check on polymorphic
 parameter type / provide a function to manipulate a type variable prior to it being used in a polymorphic
 procedure
-`#module_parameters specifies the variable as a module parameter: see § 8.
+`#module_parameters specifies the variable as a module parameter: see § 8.7.1
 `#must requires the caller to assign / use the particular return values of the called function. Used primarily for
 malloc or opening file handles: see § 17.6.2, 19.6.2, 22.2.
 `#no_abc Turn off bounds checking for the scope of a particular array/string access: in this function, do not do

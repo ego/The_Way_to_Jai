@@ -43,5 +43,3 @@ Whiskey: Application Scope (from the main file).
 Tango:   File Scope        (in file beta)
 Foxtrot: Application Scope (from file alpha).
 */
-
-
