@@ -10,7 +10,7 @@ Besides the basic types mentioned in § 5 and § 6, Jai also has  other fundamen
 If a Type is constant (in other words, known at compile time),
 you can declare other variables of that Type.  
 
-The compiler has complete knowledge of all the types at compile-time, and some of that remains accessible at run-time. We'll later see (§ 26) how to use that.  
+The compiler has complete knowledge of all the types at compile-time, and some of that remains accessible at run-time (so)called Run Time Type Information or RTTI). We'll see later(§ 26) how to use that.  
 Here are some manipulations with types, explained in the next subsections:
 
 See *9.1_types.jai*:
@@ -23,7 +23,7 @@ Thread_Index :: s64;  // (0A)
 main :: () {
     // Type alias:
     t_index : Thread_Index = 100;
-    TI :: s32; // (8B) TI is now a constant, of type Type, of value s32.
+    TI :: s32; // (0B) TI is now a constant, of type Type, of value s32.
     s: TI = 7;
     t: TI = 9;
     print("s * t = %\n", s * t); // => 63
@@ -100,7 +100,7 @@ The Any type has size 16 bytes (if you want to know why, see § 16.1). It is in 
 It is useful when working with heterogeneous arrays of pointers to different types.
 
 ## 9.6 Any and the print procedure
-`print` is defined as:
+`print` is defined in module _Basic_ as:
 
 ```jai
 print :: (format_string: string, args: .. Any, to_standard_error := false) -> bytes_printed: s64 {

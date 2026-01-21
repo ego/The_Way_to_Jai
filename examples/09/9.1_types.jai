@@ -1,9 +1,9 @@
 #import "Basic";
 
-Thread_Index :: s64;  // (0A)
+Thread_Index :: s64;  // (0A) Thread_Index is a Type alias for s64
 
 main :: () {
-    // Type alias:
+  // Type alias:
     t_index : Thread_Index = 100;
     TI :: s32; // (8B) TI is now a constant, of type Type, of value s32.
     s: TI = 7;
